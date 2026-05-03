@@ -1,3 +1,13 @@
+# Fork of LeWorldModel (see full description in the section belowbelow)
+### Replicate the paper results on modal using this code
+le-wm is a repo released by Yann LeCun's team on their new JEPA architecture (see paper here: https://arxiv.org/pdf/2603.19312). It uses observations and actions to reason about cause and effect on 'trajectories' in a number of tasks.  One of the tasks is a robotic arm lifting up a cube and moving it.
+
+The evaluation task uses the OGB-Cube aka ‘Cube’ dataset, which is a sequential collection of images of a robotic arm lifting a cube and placing it in a different location in space.  The images are generated with the SOTA robotic physics simulator MuJuCo.  The task is to see how successful JEPA can be in predicting the future image states of the robotic arms 50 steps in the future from a given timepoint. The paper cites a 74% success rate (see figure 3, right most figure on page 3 in the arxiv paper above, also figure 6 right most figure on page 8).  
+
+This fork allows you to run either inference only using the hugging face modal and Cube data checkpoints.  In the first inference run, the success rate was 72%, which is within the standard error of 50 binary trials evaluation (range is 68%-80% using the sqrt(p(1-p)/n) = sqrt(0.74*0.26/50) ~ +/- 6% std err from 74%).
+
+Will update on training / inference to see if can replicate the paper results.  Running on 12 hours on an NVIDIA L40S on Modal.
+
 
 # LeWorldModel
 ### Stable End-to-End Joint-Embedding Predictive Architecture from Pixels
