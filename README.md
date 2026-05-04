@@ -6,7 +6,11 @@ The evaluation task uses the OGB-Cube aka ‘Cube’ dataset, which is a sequent
 
 This fork allows you to run either inference only using the hugging face modal and Cube data checkpoints.  In the first inference run, the success rate was 72%, which is within the standard error of 50 binary trials evaluation (range is 68%-80% using the sqrt(p(1-p)/n) = sqrt(0.74*0.26/50) ~ +/- 6% std err from 74%).
 
-Training yields a result of 70% success rate, which is within the standard error range for the success rate calculation around 74% from the paper.  The code has a small bug - even though the lewm_cube_modal.py 'should' run evals after training finishes (~12 hours on an NVIDIA L40S on Modal), it doesn't.  You will need to run this command to generate the eval performance for the OGB-Cube eval - it will look something like this:
+Training yields a result of 70% success rate, which is within the standard error range for the success rate calculation around 74% from the paper.  The code has a small bug - even though the lewm_cube_modal.py 'should' run evals after training finishes (~12 hours on an NVIDIA L40S on Modal), it doesn't.  You will need to run this command to generate the eval performance for the OGB-Cube eval - 
+
+modal run lewm_cube_modal.py::run_eval
+
+The result will evaluate the OGBench-Cube benchmark, and will look something like this:
 
 ....
 Video saved to /cache/cube 
