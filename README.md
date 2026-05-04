@@ -9,7 +9,7 @@ This fork allows you to run either inference only using the hugging face modal a
 Training yields a result of 70% success rate, which is within the standard error range for the success rate calculation around 74% from the paper.  The code has a small bug - even though the lewm_cube_modal.py 'should' run evals after training finishes (~12 hours on an NVIDIA L40S on Modal), it doesn't.  You will need to run this command to generate the eval performance for the OGB-Cube eval - it will look something like this:
 
 ....
-Video saved to /cache/cube
+Video saved to /cache/cube 
 {'success_rate': 70.0, 'episode_successes': array([ True, False,  True,  True,  True, False, False,  True,  True,
         True,  True, False,  True,  True, False,  True,  True, False,
         True,  True,  True,  True, False,  True, False,  True,  True,
