@@ -1,4 +1,4 @@
-# Fork of LeWorldModel (see full description in the section belowbelow)
+# Fork of LeWorldModel (see full description in the section below)
 ### Replicate the paper results on modal using this code
 le-wm is a repo released by Yann LeCun's team on their new JEPA architecture (see paper here: https://arxiv.org/pdf/2603.19312). It uses observations and actions to reason about cause and effect on 'trajectories' in a number of tasks.  One of the tasks is a robotic arm lifting up a cube and moving it.
 
